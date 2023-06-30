@@ -1,0 +1,5 @@
+package br.sp.gov.etec.alocacao.controller;
+
+public class CotacaoController {
+
+}

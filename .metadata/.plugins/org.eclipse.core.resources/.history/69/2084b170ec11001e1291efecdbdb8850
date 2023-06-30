@@ -1,0 +1,30 @@
+package br.sp.gov.etec.alocacao.Controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+import br.sp.gov.etec.alocacao.model.Alocacao;
+import br.sp.gov.etec.alocacao.model.Carro;
+import br.sp.gov.etec.alocacao.model.Cliente;
+import br.sp.gov.etec.alocacao.repository.AlocacaoRepository;
+
+@RestController
+public class AlocacaoController {
+	@Autowired
+	AlocacaoRepository repository;
+	
+	@GetMapping("/cliente")
+	public List<Alocacao> clientes(){
+		return repository.findAll();
+	}
+	
+	@GetMapping("/carros")
+	public List<Alocacao> ListarCarros(){
+		return repository.findAll();
+	}
+	
+}
